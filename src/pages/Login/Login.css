@@ -1,0 +1,55 @@
+/* 背景渐变设置 */
+.login-container {
+    background-image: url('../../src/assets/bgi.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100vw;
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+}
+
+/* 卡片样式 */
+.login-card {
+    /* background-color: #1f1f2e; */
+    background-color: #25292c;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    border: none;
+    border-radius: 8px;
+    padding:  20px 20px 0 20px;
+    width: 400px;
+}
+
+/* 输入框样式 */
+.login-input {
+    background-color: #2e3a4e;
+    border: none;
+    color: #00c8c8;
+    /* border-bottom: 1px solid #00c8c8; */
+    border-bottom: 1px solid #76EDFF;
+}
+
+/* 按钮样式 */
+.login-button {
+    width: 50%;
+    /* background-color: #00c8c8; */
+    background-color: #76EDFF;
+    border: none;
+    color: #ffffff;
+    font-weight: bold;
+    margin: 20px auto 0;
+    display: block;
+    margin: 0 auto;
+}
+
+/* 输入框焦点样式 */
+.login-input:focus,
+.login-input:hover {
+    border-bottom-color: #00ffff;
+}
+
+/* 卡片内的文本样式 */
+.ant-form-item-label>label {
+    color: #00c8c8;
+}
