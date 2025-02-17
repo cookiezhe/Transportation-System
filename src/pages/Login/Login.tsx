@@ -23,7 +23,7 @@ const Login: React.FC = () => {
               onFinish={(values) => {
                 console.log('Received values: ', values);
                 message.success('登陆成功')
-                navigate('/admin/analysis'); // 登录后跳转
+                navigate('/admin/screen'); // 登录后跳转
               }}
             >
               <Form.Item

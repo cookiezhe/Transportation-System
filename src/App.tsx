@@ -4,6 +4,7 @@ import Users from './pages/Users/Users'
 import Data from './pages/Data/Data'
 import Analysis from './pages/Analysis/Analysis'
 import System from './pages/SystemManage/SystemManage'
+import Screen from './pages/Screen/Screen'
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path='analysis' element={<Analysis />} />
         <Route path='system' element={<System />} />
         <Route path='users' element={<Users />} />
+        <Route path='screen' element={<Screen />} />
       </Routes>
     </MyLayout>
   )

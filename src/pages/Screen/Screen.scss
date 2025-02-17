@@ -1,0 +1,148 @@
+@import '../../shared/helper';
+@import './chart';
+
+// 各图表模块
+.home {
+    @include flex-column;
+    @include chart;
+    flex: 1;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: #010310;
+    color: #fff;
+    font-size: px(16);
+
+    >header {
+        @include horizon-center-2420;
+        width: 100%;
+        height: px(99); // 设置该图片的像素高度 为参数即可 // width 默认为 100%
+        background-size: cover; // 按原比例 缩放
+        background-position: -140px center;
+    }
+
+    // >footer {
+    //     @include flex-center;
+    //     height: px(68);
+    //     margin: px(20) 0 0;
+    //     border-top: 1px solid #0d2d59;
+    //     background: #0c0d2b;
+    // }
+
+    >main {
+        @include horizon-center-2420;
+        padding-top: px(20);
+        flex: 1;
+        width: 99%;
+        height: 100%;
+        overflow: hidden;
+        display: grid;
+        grid-template:
+            'box1 box2 box4 box5' 1fr
+            /* 行高 */
+            'box3 box3 box4 box5' 1fr
+            /* 行高 */
+            // / 366fr 366fr 811fr 747fr;
+            / 3fr 0 4fr 3fr;
+        /* 列宽 */
+        grid-column-gap: px(15);
+        grid-row-gap: px(10);
+
+        // 图表模块 统一边框(定义了一个带有阴影的边框)
+        .bordered {
+            background-color: rgba(12, 17, 57, 0.8);
+            border: 1px solid #0764bc;
+            border-radius: 4px;
+            position: relative;
+            box-shadow: 0 0 2px 0 #0f3361, inset 0 0 2px 0 #0f3361;
+
+            &::before {
+                content: '';
+                pointer-events: none; // 穿透鼠标事件
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                border-radius: 4px;
+                box-shadow: 17px 0 0 -16px #0f3361,
+                    -17px 0 0 -16px #0f3361,
+                    0 17px 0 -16px #0f3361,
+                    0 -17px 0 -16px #0f3361,
+                    9px 0 0 -8px #0d4483,
+                    -9px 0 0 -8px #0d4483,
+                    0 9px 0 -8px #0d4483,
+                    0 -9px 0 -8px #0d4483, ;
+
+            }
+
+        }
+
+        $box-styles: (//是一个scss的映射，类似于js中的object，其中定义了5个key-value对，每个section的背景色都是transparent
+            1: transparent,
+            2: transparent,
+            3: transparent,
+            4: transparent,
+            5: transparent,
+        );
+
+    // section1~5
+    @each $key, $color in $box-styles {//@each是scss循环语法，他会遍历$box-style这个映射，把key和value拿出来使用
+        >.section#{$key} {
+            @include flex-column-between;
+            grid-area: box#{$key};
+            background-color: $color;
+            width: 100%;
+            height: 80%;
+        }
+    }
+
+    >.section1 {
+        @include flex-column-between;
+        margin-bottom: 10px;
+
+        >.row1 {
+                margin-bottom: 10px;
+                height: px(355);
+                // height: 50%;
+            }
+
+        >.row2 {
+            height: px(317);
+            // height: 50%;
+        }
+    }
+
+    >.section1 {
+        @include flex-column-between;
+        margin-bottom: 10px;
+    }
+
+    >.section5 {
+        @include flex-column-between;
+        padding-right: 0;
+
+        >.row1 {
+            height: px(457);
+            margin-bottom: 30px;
+            // height: 50%;
+        }
+
+        >.row2 {
+            height: px(457);
+            // height: 30%;
+        }
+
+        // >.row3 {
+        //     height: px(555);
+        //     // height: 45%;
+        // }
+    }
+}
+
+.label-text {
+    //transform: scale(0.8);
+    //transform-origin: center center;
+    white-space: nowrap;
+}
+}

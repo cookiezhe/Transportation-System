@@ -114,6 +114,11 @@ const MyLayout = ({ children }: any) => {
 
     const navigate = useNavigate()
     const { pathname } = useLocation()//获取location中的数据
+    console.log(pathname);
+    
+    const isScreenPage = pathname === '/admin/screen'//判断是否为大屏页面
+    console.log(isScreenPage);
+    
     const tmpOpenKeys = findOpenKeys(pathname)
     // 获取面包屑数据
     const [breadcrumbs, setBreadcrumbs] = useState<any>([])
@@ -188,7 +193,7 @@ const MyLayout = ({ children }: any) => {
                 {/* 右侧展示区 */}
                 <Content
                     style={{
-                        margin: '24px 16px',//大屏页面无边距
+                        margin: isScreenPage ? '0':'24px 16px',//大屏页面无边距
                         padding:  '24px',//大屏页面无内边距
                         // paddingTop:5,
                         minHeight: '100%',//保证全屏高度
