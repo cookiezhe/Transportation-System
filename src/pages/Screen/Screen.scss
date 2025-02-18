@@ -45,7 +45,7 @@
             // / 366fr 366fr 811fr 747fr;
             / 3fr 0 4fr 3fr;
         /* 列宽 */
-        grid-column-gap: px(15);
+        grid-column-gap: px(7);
         grid-row-gap: px(10);
 
         // 图表模块 统一边框(定义了一个带有阴影的边框)
@@ -100,6 +100,7 @@
     >.section1 {
         @include flex-column-between;
         margin-bottom: 10px;
+        padding-left: -10px;
 
         >.row1 {
                 margin-bottom: 10px;
@@ -113,11 +114,21 @@
         }
     }
 
-    >.section1 {
+    >.section4 {
         @include flex-column-between;
-        margin-bottom: 10px;
-    }
+        margin-bottom:20px;
 
+        >.row1 {
+            margin-bottom: 10px;
+            // height: px(405);
+            height: 68%;
+        }
+
+        >.row2 {
+            // height: px(337);
+            height: 50%;
+        }
+    }
     >.section5 {
         @include flex-column-between;
         padding-right: 0;

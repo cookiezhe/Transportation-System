@@ -176,12 +176,13 @@
     // 籍贯
     .native-place {
         // height: px(753);
-        height: px(703);
+        height: px(503);
         width: 100%;
         background: transparent;
 
         >.wrapper {
             position: relative;
+            height: px(503);
             width: 100%;
             flex: 1;
             flex-direction: column;
@@ -232,7 +233,7 @@
 
         // 年龄段图表外框
         >.charts-wrapper {
-            padding: px(30);
+            padding: px(15);
         }
 
         // age-bracket-

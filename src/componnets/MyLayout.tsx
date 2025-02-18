@@ -165,18 +165,7 @@ const MyLayout = ({ children }: any) => {
 
                 {/* 右侧头部 */}
                 <Header style={{ padding: 0, background: colorBgContainer }}>
-                    {/* 菜单栏收起展开按钮 */}
-                    <Button
-                        type="text"
-                        icon={collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
-                        onClick={() => setCollapsed(!collapsed)}
-                        style={{
-                            fontSize: '16px',
-                            width: 64,
-                            height: 64,
-                        }}
-                    />
-                    <span className='app-title'>智能交通管理系统</span>
+                    <span className='app-title' style={{paddingLeft:'23px'}}>智能交通管理系统</span>
                     {/* 头像下拉-个人中心、退出部分 */}
                     <Dropdown menu={{ items, onClick }}>
                         <a 

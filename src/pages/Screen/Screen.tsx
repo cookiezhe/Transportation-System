@@ -34,19 +34,16 @@ export const Screen = () => {
                     <Chart5 />
                 </section> */}
                 <section className="section4">
-                    <Chart6 />
-                    <div className="bordered age-bracket">
-                        <h2>犯罪人员年龄段分布</h2>
-                        <div className="charts-wrapper">
-                            <Chart7 />
-                            <Chart9 />
-                        </div>
+                    <div className='row1'><Chart6 /></div>
+                    <div className="bordered age-bracket row2">
+                        <h2>用户出行方式</h2>
+                        <Chart9 />
                     </div>
                 </section>
                 <section className="section5">
                     {/*案发类型*/}
                     <div className="bordered row1 crime-type">
-                        <h2>案发类型统计</h2>
+                        <h2>宏观基本图(MFD)</h2>
                         <div className="charts-wrapper">
                             <Chart10 />
                             <Chart11 />
@@ -54,7 +51,7 @@ export const Screen = () => {
                     </div>
                     {/* 案发街道 */}
                     <div className="bordered row2 crime-street">
-                        <h2>案发街道统计</h2>
+                        <h2>交通违法</h2>
                         <div className="charts-wrapper">
                             <Chart12 />
                             <Chart13 />
